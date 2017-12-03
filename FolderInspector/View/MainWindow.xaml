@@ -1,0 +1,22 @@
+﻿<Window x:Class="FolderInspectorView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:View="clr-namespace:FolderInspectorView"
+        xmlns:ViewModel="clr-namespace:FolderInspectorViewModel"
+        Title="Folder Inspector"
+        MinWidth="330"
+        MinHeight="300"
+        Top="{View:SettingBinding Top}"
+        Left="{View:SettingBinding Left}"
+        Width="{View:SettingBinding Width}"
+        Height="{View:SettingBinding Height}">
+
+    <Window.DataContext>
+        <ViewModel:InspectorViewModel/>
+    </Window.DataContext>
+
+    <View:InspectorView/>
+</Window>
